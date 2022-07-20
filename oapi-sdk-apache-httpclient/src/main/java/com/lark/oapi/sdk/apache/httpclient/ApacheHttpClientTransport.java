@@ -1,4 +1,4 @@
-package com.larksuite.oapi.sdk.apache.httpclient;
+package com.lark.oapi.sdk.apache.httpclient;
 
 import com.lark.oapi.core.httpclient.IHttpTransport;
 import com.lark.oapi.core.request.FormData;

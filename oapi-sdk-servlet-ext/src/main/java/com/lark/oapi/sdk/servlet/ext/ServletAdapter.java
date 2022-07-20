@@ -1,4 +1,4 @@
-package com.larksuite.oapi.sdk.servlet.ext;
+package com.lark.oapi.sdk.servlet.ext;
 
 import com.lark.oapi.card.CardActionHandler;
 import com.lark.oapi.core.request.EventReq;
