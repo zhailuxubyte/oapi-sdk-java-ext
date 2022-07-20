@@ -1,12 +1,12 @@
 package com.larksuite.oapi.sdk.apache.httpclient;
 
-import com.larksuite.oapi.core.httpclient.IHttpTransport;
-import com.larksuite.oapi.core.request.FormData;
-import com.larksuite.oapi.core.request.FormDataFile;
-import com.larksuite.oapi.core.request.RawRequest;
-import com.larksuite.oapi.core.response.RawResponse;
-import com.larksuite.oapi.core.utils.Jsons;
-import com.larksuite.oapi.core.utils.Strings;
+import com.lark.oapi.core.httpclient.IHttpTransport;
+import com.lark.oapi.core.request.FormData;
+import com.lark.oapi.core.request.FormDataFile;
+import com.lark.oapi.core.request.RawRequest;
+import com.lark.oapi.core.response.RawResponse;
+import com.lark.oapi.core.utils.Jsons;
+import com.lark.oapi.core.utils.Strings;
 import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
@@ -77,7 +77,7 @@ public class ApacheHttpClientTransport implements IHttpTransport {
         }
         request.setEntity(builder.build());
       } else {
-        StringEntity entity = new StringEntity(Jsons.LONG_TO_STR_GSON.toJson(rawRequest.getBody()));
+        StringEntity entity = new StringEntity(Jsons.LONG_TO_STR.toJson(rawRequest.getBody()));
         request.setEntity(entity);
       }
     }

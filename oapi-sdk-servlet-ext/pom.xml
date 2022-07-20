@@ -3,15 +3,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <!--    <parent>-->
-  <!--        <artifactId>oapi-sdk-java-ext</artifactId>-->
-  <!--        <groupId>com.larksuite.oapi</groupId>-->
-  <!--        <version>1.0-snapshot</version>-->
-  <!--    </parent>-->
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.larksuite.oapi</groupId>
   <artifactId>oapi-sdk-servlet-ext</artifactId>
-  <version>1.0-snapshot</version>
+  <version>1.0.0-snapshot</version>
   <name>oapi-sdk-servlet-ext</name>
   <url>https://github.com/zhailuxubyte/oapi-sdk-java-ext</url>
   <description>Larksuite open platform facilitates the integration of enterprise applications and
