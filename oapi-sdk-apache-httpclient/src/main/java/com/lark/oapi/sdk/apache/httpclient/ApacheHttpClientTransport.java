@@ -31,12 +31,12 @@ public class ApacheHttpClientTransport implements IHttpTransport {
     httpclient = builder.httpclient;
   }
 
-  public void Close() throws IOException {
-    httpclient.close();
-  }
-
   public static Builder newBuilder() {
     return new Builder();
+  }
+
+  public void Close() throws IOException {
+    httpclient.close();
   }
 
   @Override
@@ -77,7 +77,12 @@ public class ApacheHttpClientTransport implements IHttpTransport {
         }
         request.setEntity(builder.build());
       } else {
-        StringEntity entity = new StringEntity(Jsons.LONG_TO_STR.toJson(rawRequest.getBody()));
+        StringEntity entity;
+        if (rawRequest.isSupportLong2String()) {
+          entity = new StringEntity(Jsons.LONG_TO_STR.toJson(rawRequest.getBody()));
+        } else {
+          entity = new StringEntity(Jsons.DEFAULT.toJson(rawRequest.getBody()));
+        }
         request.setEntity(entity);
       }
     }
