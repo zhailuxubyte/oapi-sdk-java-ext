@@ -15,13 +15,17 @@ import javax.servlet.http.HttpServletResponse;
 
 public class HttpTranslator {
 
+  private String normalizeKey(String name) {
+    return name != null ? name.toLowerCase() : null;
+  }
+
   private Map<String, List<String>> toHeaderMap(HttpServletRequest req) {
     Map<String, List<String>> headers = new HashMap<>();
     Enumeration<String> names = req.getHeaderNames();
     while (names.hasMoreElements()) {
       String name = names.nextElement();
       List<String> values = Collections.list(req.getHeaders(name));
-      headers.put(name, values);
+      headers.put(normalizeKey(name), values);
     }
     return headers;
   }
